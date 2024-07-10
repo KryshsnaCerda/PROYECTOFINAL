@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+     <style>
+    body {
+        background-image: url("{% static 'img/fondito.png' %}");
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-position: contain; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        color: rgb(8, 8, 8);
+    }
+    </style>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
