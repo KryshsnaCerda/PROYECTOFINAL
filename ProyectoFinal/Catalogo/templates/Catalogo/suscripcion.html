@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Cerrar sesion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="principal">Principal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="catalogo">Catálogo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="suscripcion">Suscripción</a>
+        </li>
+    </ul>
+</div>
+</nav>
+
+<img src="{% static 'img/image.png' %}" style="margin-left: 550px;">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="myForm" method="POST" action="#" class="text-center">
+                <div class="form-group">
+                    <label for="nombre" style="color: white;">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido" style="color: white;">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="rut" style="color: white;">Rut</label>
+                    <input type="text" id="rut" name="rut" pattern="[0-9]{7,8}-[0-9Kk]{1}" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo" style="color: white;">Correo</label>
+                    <input type="email" id="correo" name="correo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad" style="color: white;">Edad</label>
+                    <input type="number" id="edad" name="edad" min="18" max="100" class="form-control" required>
+                    <p style="color: rgb(255, 0, 0);">*Debes ser mayor de 18 años para suscribirte*</p>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        <div style="text-align: center;">
+            <p style="color: rgba(255, 255, 255, 0.714);">¿Qué consigo?</p>
+            <fieldset>
+                <p id="susc" style="color: white;">Al suscribirte serás la primera persona en conocer nuestras novedades y ofertas limitadas</p>
+            </fieldset>
+            <button type="button" id="btn-mostrar" class="btn btn-secondary">Mostrar</button>
+            <button type="button" id="btn-ocultar" class="btn btn-secondary">Ocultar</button>
+        </div>
+        </div>
+    </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <script src= "{% static 'js/main.js' %}"></script>      </body>
+<footer class="text-center mt-5">
+  <p>La hora actual es: <span id="current-time"></span></p>
+</footer>
+</html>

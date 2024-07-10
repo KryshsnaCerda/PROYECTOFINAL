@@ -1,0 +1,58 @@
+body{
+    text-align: center;
+    font-size: 220%;
+    color: white;
+    background-image: url("img/1.png");
+
+}
+.navbar {
+    padding: 10px;
+}
+.nav-link {
+    color: white; 
+    font-size: 18px;
+}
+.nav-link.active {
+    color: rgb(253, 253, 250); /* Color de la letra del enlace activo */
+}
+
+.nav-link:hover {
+    color: rgba(211, 211, 211, 0.816); /* Color de las letras al pasar el ratón por encima */
+}
+.card-custom {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.carousel-item img {
+    max-height: 530px; /* Altura máxima de las imágenes del carrusel */
+    width: 530; /* Ancho se ajusta automáticamente */
+    margin: auto; /* Centrado horizontal de las imágenes */
+}
+
+.carousel-inner {
+    max-width: 530px; /* Ancho máximo del carrusel */
+    margin: auto; /* Centrado horizontal del carrusel */
+}
+
+footer {
+    height: 70px;
+    margin-top: 80px; 
+    color: black;
+    background-color: white;
+}
+.card-text, .card-body, .form-group label, .form-check-label, .btn {
+    color: black;
+    font-size: 1.25rem; 
+    width: 80%;
+}
+
+.custom-card {
+    font-size: 1.25rem; /* Agranda la letra */
+}
+.a{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-left: 20%;
+    
+}

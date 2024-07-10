@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Clientes</title>
+    <style>
+        body {
+            background-image: url("{% static 'img/fondito.png' %}");
+            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+            background-position: contain; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            color: rgb(8, 8, 8);
+        }
+        .container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ecf0f1;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: white;
+        }
+        .buttons {
+            margin: 20px;
+        }
+        .buttons a {
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #eef1f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datos Clientes:</h1>
+        
+        <div class="buttons">
+            <a href="{% url 'annadir_cliente' %}">Añadir</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Correo</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if admin %}
+                    {% for x in admin %}
+                        <tr>
+                            <td>{{ x.correo }}</td>
+                            <td>{{ x.nombre }}</td>
+                            <td>{{ x.aparterno }}</td>
+                            <td>{{ x.amaterno }}</td>
+                            <td>{{ x.contraseña }}</td>
+                        </tr>
+                        
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

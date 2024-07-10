@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Cliente</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Eliminar Cliente</h1>
+        <form method="post" action="{% url 'borrar_cliente' cliente.pk %}">
+            {% csrf_token %}
+            <p>¿Estás seguro de que deseas eliminar a {{ cliente.nombre }}?</p>
+            <input type="submit" value="Eliminar Cliente">
+        </form>
+    </div>
+</body>
+</html>
+

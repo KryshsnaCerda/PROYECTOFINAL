@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    font-size: 220%;
+    color: white;
+    background-image: url("{% static 'img/fondito.png' %}");
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: contain; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+}
